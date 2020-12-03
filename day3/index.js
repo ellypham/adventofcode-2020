@@ -22,12 +22,13 @@ array.forEach((item, index) => {
 
   newPosition = position + moveRight;
 
-  if (newPosition > item.length) {
-    position = newPosition - item.length - 1;
+  if (newPosition > (item.length - 1)) {
+    position = newPosition - item.length;
+    console.log(`reset: ${position}`)
   } else {
     position = newPosition;
+    console.log(`position: ${position}`)
   }
 })
-
 
 console.log(treeCount)
